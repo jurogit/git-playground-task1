@@ -29,3 +29,5 @@ I changed the session timeout  and added a countNotes function."
 2. countNotes() is still not reachable from the CLI. notes.js has no count case, so notes count prints the help text. The function is exported but nothing calls it. If you want a count command, it needs a case "count" branch (with a break) and a line in the help text.
 3. notes.md is still untracked in the repo root. It's the "Prediction" file, and its text is now out of date: it says you added a countNotes function in a place that no longer matches the diff. Keep it out of the commit unless it's meant to be part of the exercise.
 4. The 1.1.0 bump promises a feature users can't reach yet. It's fine if the commit is only about adding the function. Otherwise, bump the version after count is wired up.
+
+Yes, Claude caught the stray change: it listed the package.json version bump (1.0.0 → 1.1.0) in its table and flagged it as suspicious in point 4 of "Still suspicious".
